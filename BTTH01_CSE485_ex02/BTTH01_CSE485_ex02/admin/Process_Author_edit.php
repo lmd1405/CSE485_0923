@@ -11,14 +11,14 @@ try{
     $stmt->execute();
     $RowCount = $stmt->rowCount();
     if($RowCount>0){
-        header("Location:edit_author.php?notification=existed");
+        header("Location:author.php?notification=existed");
     }
     else{
     $sql = "UPDATE tacgia set ten_tgia='$name', hinh_tgia='photo'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     if($stmt->rowCount() > 0){
-        header("Location:edit_author.php?notification=added");
+        header("Location:author.php?notification=added");
     }
     }
 
