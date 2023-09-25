@@ -14,7 +14,7 @@ try{
         header("Location:author.php?notification=existed");
     }
     else{
-    $sql = "UPDATE tacgia set ten_tgia='$name', hinh_tgia='photo'";
+    $sql = "UPDATE tacgia set ten_tgia='$name', hinh_tgia='$photo'";
     $stmt = $conn->prepare($sql);
     $stmt->execute();
     if($stmt->rowCount() > 0){
